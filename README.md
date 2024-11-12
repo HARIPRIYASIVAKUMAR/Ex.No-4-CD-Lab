@@ -1,11 +1,13 @@
 # Ex-4-LETTER-FOLLOWED-BY-ANY-NUMBER-OF-LETTERS-OR-DIGITS-USING-YACC-USING-YACC
-RECOGNITION OF A VALID VARIABLE WHICH STARTS WITH A LETTER FOLLOWED BY ANY NUMBER OF LETTERS OR DIGITS USING YACC
+## Date: 3.10.2024	
+## Reg No:212223220029
+Recognition of a valid variable which starts with a letter followed by any number of letters or digits using YACC
+			
 
-# Date:20-10-2024
+RECOGNITION OF A VALID VARIABLE WHICH STARTS WITH A LETTER FOLLOWED BY ANY NUMBER OF LETTERS OR DIGITS USING YACC
 
 # Aim:
 To write a YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits.
-
 # ALGORITHM
 1.	Start the program.
 2.	Write a program in the vi editor and save it with .l extension.
@@ -15,9 +17,9 @@ To write a YACC program to recognize a valid variable which starts with a letter
 6.	Compile the yacc program with YACC compiler to produce output file as y.tab.c. eg $ yacc –d arith_id.y
 7.	Compile these with the C compiler as gcc lex.yy.c y.tab.c
 8.	Enter a statement as input and the valid variables are identified as output.
-
 # PROGRAM
-variable.l
+
+### EX4.l
 ```
 %{
 #include "y.tab.h"
@@ -43,9 +45,9 @@ int yywrap()
 { 
 return 1;
 }
-```
 
-variable_text.y
+```
+### EX4.y
 ```
 %{
 #include <stdio.h>
@@ -67,10 +69,14 @@ yyparse();
 
 void yyerror(char *s) { 
 }
+
 ```
 
+
 # Output
-![image](https://github.com/user-attachments/assets/c5cf56fa-a330-4880-b52f-844cc0ea5fc2)
+
+![Screenshot_from_2024-10-17_14-10-29 1](https://github.com/user-attachments/assets/7703109c-a7b3-4dd3-802e-7bbb4f5ee5cb)
+
 
 # Result
 A YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits is executed successfully and the output is verified.
